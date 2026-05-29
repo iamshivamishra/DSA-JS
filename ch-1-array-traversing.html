@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Traversing</title>
+</head>
+
+<body>
+
+  <input type="text" id="element" placeholder="Enter your name">
+  <br><br>
+
+  <button onclick="getElement()">Click Me</button>
+
+  <script>
+
+    let data = [9,45,12,8,45,23,7,78,11,41,77];
+  
+    // Array Traversing
+    for(let i = 0; i < data.length; i++){
+      // document.write(data[i] + "<br>");
+    }
+
+    // Function
+    function getElement(){
+      let value = document.getElementById("element").value;
+      value = parseInt(value);
+      if(isNaN(value)){
+        alert("Please enter a valid number not a string");
+      } else if(value > data.length){
+        alert("Please enter a number less than " + data.length)
+      } else if(value < 0){
+        alert("Please enter a number greater than 0")
+      }else{
+        alert("Your number is " + data[value]);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
