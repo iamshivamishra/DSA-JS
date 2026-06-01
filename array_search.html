@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<input type="text" id="items" placeholder="Enter item to search">
+ <button onclick="searchItem()">Search Your Number</button>
+  <script> 
+    let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let items = 6;
+    
+    for(let i=0; i < data.length; i++){
+    if(data[i] === items){
+        // console.log(i);
+    }
+  }
+
+  function searchItem() {
+    let data = [1,2,3,4,5,6,7,8,9,10];
+    let item = Number(document.getElementById("items").value);
+    let found = false;
+
+    for(let i = 0; i < data.length; i++) {
+        if(data[i] === item) {
+            document.write(`Your number ${item} is found at position: ${i}`);
+            found = true;
+            break;
+        }
+    }
+
+    if(!found) {
+        document.write(`Your number ${item} is not found in the array`);
+    }
+}
+  </script>
+</body>
+</html>
